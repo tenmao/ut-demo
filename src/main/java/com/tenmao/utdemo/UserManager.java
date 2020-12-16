@@ -2,6 +2,7 @@ package com.tenmao.utdemo;
 
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import java.util.UUID;
 
 /**
@@ -10,7 +11,10 @@ import java.util.UUID;
  */
 @Component
 public class UserManager {
+    @Resource
+    private UserMapper userMapper;
+
     public User getById(int id) {
-        return User.builder().id(id).name(UUID.randomUUID().toString()).build();
+        return userMapper.getById(id);
     }
 }
