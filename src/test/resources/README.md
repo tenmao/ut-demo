@@ -35,3 +35,7 @@ spring.datasource.driver-class-name=org.h2.Driver
 
 ### 注意事项
 - 不支持Spring Boot2.4.X
+
+## Controller测试
+
+参考示例：UserControllerTest
