@@ -17,4 +17,9 @@ public class UserManager {
     public User getById(int id) {
         return userMapper.getById(id);
     }
+
+    public int save(User user) {
+        userMapper.insertOne(user);
+        return user.getId();
+    }
 }

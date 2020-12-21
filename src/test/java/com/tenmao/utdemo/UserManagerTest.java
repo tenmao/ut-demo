@@ -16,8 +16,10 @@ class UserManagerTest {
 
     @Test
     void getById() {
-        User user = userManager.getById(1);
-        Assertions.assertEquals(1, user.getId());
-        Assertions.assertNotNull(user.getName());
+        User user = new User(null, "test_name");
+        int id1 = userManager.save(user);
+
+        User userInDb = userManager.getById(id1);
+        Assertions.assertEquals(user, userInDb);
     }
 }
