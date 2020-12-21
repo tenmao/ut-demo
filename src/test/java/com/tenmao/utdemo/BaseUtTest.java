@@ -22,6 +22,6 @@ class BaseUtTest {
         Assertions.assertThrows(IllegalArgumentException.class, () -> BaseUt.positiveAdd(-1, -1));
 
         //耗时断言
-        Assertions.assertTimeout(Duration.ofMillis(10), () -> Thread.sleep(9));
+        Assertions.assertTimeout(Duration.ofSeconds(2), () -> Thread.sleep(1));
     }
 }
