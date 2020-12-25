@@ -3,6 +3,7 @@ package com.tenmao.utdemo;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 
@@ -15,6 +16,7 @@ class UserManagerTest {
     private UserManager userManager;
 
     @Test
+    @Transactional
     void getById() {
         User user = new User(null, "test_name");
         int id1 = userManager.save(user);
